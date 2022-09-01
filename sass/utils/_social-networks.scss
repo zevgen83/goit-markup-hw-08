@@ -1,0 +1,33 @@
+@import '../utils/list';
+
+.social-networks {
+    @extend %list;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+.social-networks__link {
+    width: 44px;
+    height: 44px;
+    display: flex;   
+    color: $fill-icon;
+    align-items:center;
+    justify-content: center;
+    border-radius: 50%;
+
+    transition: color $timing $cubic,
+                background-color $timing $cubic;
+    
+    &:hover, &:focus {
+        color: $white-color;
+        background-color: $blue-color;  
+    }
+}
+.social-networks__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}

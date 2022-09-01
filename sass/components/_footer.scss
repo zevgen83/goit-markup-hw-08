@@ -1,0 +1,181 @@
+@import '../utils/container';
+@import '../utils/logo';
+@import '../utils/list';
+
+.footer {
+    background-color: $black-background;
+    padding-top: 60px;
+    padding-bottom: 60px;    
+}
+.footer-wrapper {
+    @extend %container;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    @media screen and (min-width: 1200px) {        
+        align-items: baseline;
+        text-align: left;
+    }    
+} 
+.footer__logo {
+    @extend %logo;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.footer__logo--part {
+    color: $white-color;
+}
+.footer-container-address {
+    @media screen and (max-width: 1199.5px) {
+        margin-bottom: 60px;
+    }
+}
+.footer-address {
+    font-size: 14px;
+    line-height: 1.71;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    &__item:not(:last-child) {
+        margin-bottom: 8px;
+    }
+    @media screen and (min-width: 1200px) {
+        &__item:not(:last-child) {
+            margin-bottom: 9px;
+        }
+    }
+    
+}
+.footer-address__map {
+    color: $white-color;
+    text-decoration: none;
+    display:block;
+    margin-top: 0;
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 9px;
+    }
+}
+.footer-address__list {
+    @extend %list;
+}
+.footer-address__link {
+    text-decoration: none;
+    display: block;
+    color: $blackout-color;
+
+    transition: color $timing $cubic;
+    
+    &:hover, &:focus {
+        color: $blue-color;
+    }
+}
+.footer-join {
+    @media screen and (max-width: 767.5px) {        
+        margin-bottom: 60px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        margin-right: auto;
+        margin-left: 70px;
+    }
+    
+}
+.footer-join__text, .subscription__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white-color;
+    @media screen and (min-width: 1200px) {
+        text-align: left;    
+    }
+}
+.footer-join__link {
+    color: $white-color;
+    background-color: $footer-social-icon;
+
+    transition: background-color $timing $cubic;
+
+    &:hover, &:focus {
+        color: $white-color;
+        background-color: $blue-color;  
+    }
+}
+
+.subscription__form {    
+    display: flex;    
+    align-items: center;
+    @media screen and (max-width: 767.5px) {
+        max-width: 450px;
+    }
+    @media screen and (max-width: 1199.5px) {
+        flex-direction: column;
+    }
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 570px;    
+    }	
+}
+.subsription__input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 16px;
+	outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;    
+    background-color: transparent;
+    @media screen and (max-width: 1199.5px) {
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 12px;
+    }
+}
+.subsription__btn {
+	display: flex;
+	justify-content: center;
+	color: $white-color;
+	background-color: $blue-color;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 0.06em;
+	padding: 10px 28px;
+    @media screen and (max-width: 1199.5px) {
+        width: 200px;
+    }
+	
+	transition-property: background-color $timing $cubic, 
+                         color $timing $cubic;
+
+    &:hover,
+    &:focus {
+	background-color: #188ce8;
+    }
+}
+.subscription__icon {
+    width: 24px;
+    height: 24px;
+    fill: $white-color;
+    align-self: center;
+	margin-left: 10px;
+}
