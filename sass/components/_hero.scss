@@ -76,6 +76,11 @@
     font-size: 26px;
     line-height: 1.61;
     text-transform: uppercase;
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 1.36;
+    }
+
 }
 .hero__btn {
     font-weight: 700;
